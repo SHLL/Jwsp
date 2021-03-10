@@ -1,0 +1,18 @@
+#该配置文件(application.yml/properties)在一个项目中只能有一个
+#多模块项目同样适用
+#若想放置多个配置文件来分别配置单个模块中的配置
+#应该使用spring.profiles.active=xxx,xxx 来统一加载多个别名的配置文件
+# (application-xxx.yml/properties)
+# 资料参考来源 ： https://blog.csdn.net/u012988901/article/details/83024406
+
+# 入口处的主配置文件，定义项目入口状态等
+# 启用其他子模块的配置文件
+
+server:
+  port: 8080
+
+debug: true
+
+spring:
+  profiles:
+    active: dao
